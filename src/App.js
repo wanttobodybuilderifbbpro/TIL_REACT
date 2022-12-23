@@ -26,10 +26,20 @@ function App() {
       <h4>ReactBlog</h4>
      </div>
 
-     <button onClick={
-         ()=>{titlechange(['Suggest to Women Coat', 'Gangnam Udong Restaurant', 'Self-study with Python']);
+     <button onClick={()=>{
+      let copy = [...title];  {/* [...] 해야 작동함 */}
+      copy[0] = 'Suggest to Women Coat'
+      {/* ▲array데이터 다룰 땐 원본은 보존하는게 좋다 */}  
+      titlechange(copy);
        }}> 
      Change the sentences </button>
+
+     <button onClick ={()=>{
+      let copy = [... title];
+      copy.sort();
+      titlechange(copy);
+     }}>Order by ABC</button>
+     
 
      <div className="list">
       <h4>{ title[0] } 
