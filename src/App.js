@@ -54,8 +54,39 @@ function App() {
       <h4>{ title[2] }</h4>
       <p>Published by 21st, December.</p>
      </div>
+
+     <Modal></Modal>
+
+     <NewYear />
+
     </div>
-  );
+  );  
 }
+
+function Modal(){    //다른 function 만들려면 바깥에다 만들어야
+   return(
+    <div className="modal">
+      <h4>Title</h4>
+      <p>Date</p>
+      <p>Details</p>
+    </div>
+   )
+}
+
+function NewYear(){
+  return(
+    <div className="modal">
+      <h4>Happy New Year</h4>
+      <p>2023</p>
+      <p>Januaray, First.</p>
+    </div>
+  )
+}
+
+const Modal1 = () => {
+  return(
+    <div></div>
+  )
+}  //이런식으로 해도 문법이 됨 component const는 에러 메시지를 출력해줌. 
 
 export default App;
